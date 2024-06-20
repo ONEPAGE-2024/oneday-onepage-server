@@ -5,4 +5,5 @@ import com.onepage.server.global.common.BaseResponse;
 
 public interface DiaryService {
     BaseResponse diaryCreate(DiaryDTO diaryDTO);
+    BaseResponse findAll();
 }
