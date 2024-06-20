@@ -1,7 +1,7 @@
-package com.onepage.server.domain.mapper;
+package com.onepage.server.domain.diary.mapper;
 
-import com.onepage.server.domain.dto.DiaryDTO;
-import com.onepage.server.domain.entity.Diary;
+import com.onepage.server.domain.diary.dto.DiaryDTO;
+import com.onepage.server.domain.diary.entity.Diary;
 import org.springframework.stereotype.Component;
 
 import java.time.LocalDateTime;

@@ -1,4 +1,4 @@
-package com.onepage.server.domain.dto;
+package com.onepage.server.domain.diary.dto;
 
 import lombok.Builder;
 

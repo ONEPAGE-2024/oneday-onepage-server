@@ -1,4 +1,4 @@
-package com.onepage.server.domain.entity;
+package com.onepage.server.domain.diary.entity;
 
 import jakarta.persistence.*;
 import lombok.*;

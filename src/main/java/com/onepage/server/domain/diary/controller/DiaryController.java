@@ -1,7 +1,7 @@
-package com.onepage.server.domain.controller;
+package com.onepage.server.domain.diary.controller;
 
-import com.onepage.server.domain.dto.DiaryDTO;
-import com.onepage.server.domain.service.DiaryService;
+import com.onepage.server.domain.diary.dto.DiaryDTO;
+import com.onepage.server.domain.diary.service.DiaryService;
 import com.onepage.server.global.common.BaseResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;

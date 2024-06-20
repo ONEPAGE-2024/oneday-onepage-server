@@ -1,9 +1,9 @@
-package com.onepage.server.domain.service;
+package com.onepage.server.domain.diary.service;
 
-import com.onepage.server.domain.dto.DiaryDTO;
-import com.onepage.server.domain.entity.Diary;
-import com.onepage.server.domain.mapper.DiaryMapper;
-import com.onepage.server.domain.repository.DiaryRepository;
+import com.onepage.server.domain.diary.dto.DiaryDTO;
+import com.onepage.server.domain.diary.entity.Diary;
+import com.onepage.server.domain.diary.mapper.DiaryMapper;
+import com.onepage.server.domain.diary.repository.DiaryRepository;
 import com.onepage.server.global.common.BaseResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Sort;
