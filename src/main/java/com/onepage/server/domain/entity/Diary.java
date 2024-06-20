@@ -48,4 +48,10 @@ public class Diary {
         this.content = content;
         this.regDate = regDate;
     }
+
+    public void fixData(String emotion, String hashtag, String content){
+        this.emotion = emotion;
+        this.hashtag = hashtag;
+        this.content = content;
+    }
 }
