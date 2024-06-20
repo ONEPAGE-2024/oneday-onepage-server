@@ -32,9 +32,19 @@ public class DiaryServiceImpl implements DiaryService {
     }
 
     @Override
-    public void updateDiary(DiaryDTO diaryDTO) {
+    public BaseResponse updateDiary(DiaryDTO diaryDTO) {
         Diary diary = diaryRepository.findById(diaryDTO.id()).get();
         diary.fixData(diaryDTO.emotion(), diaryDTO.hashtag(), diaryDTO.content());
         diaryRepository.save(diary);
+        return new BaseResponse(HttpStatus.OK, "일기 수정 성공");
+    }
+
+    @Override
+    public BaseResponse deleteDiary(Long id) {
+        if (!diaryRepository.existsById(id)) {
+            throw new RuntimeException();
+        }
+        diaryRepository.deleteById(id);
+        return new BaseResponse(HttpStatus.OK, "일기 삭제 성공");
     }
 }
