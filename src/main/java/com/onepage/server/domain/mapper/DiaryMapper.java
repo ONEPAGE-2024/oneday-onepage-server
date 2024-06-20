@@ -2,11 +2,13 @@ package com.onepage.server.domain.mapper;
 
 import com.onepage.server.domain.dto.DiaryDTO;
 import com.onepage.server.domain.entity.Diary;
+import org.springframework.stereotype.Component;
 
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.stream.Collectors;
 
+@Component
 public class DiaryMapper {
     public static DiaryDTO entityToDto(Diary entity) {
         return DiaryDTO.builder()
