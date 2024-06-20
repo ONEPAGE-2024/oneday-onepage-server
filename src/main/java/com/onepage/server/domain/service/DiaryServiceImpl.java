@@ -30,4 +30,11 @@ public class DiaryServiceImpl implements DiaryService {
         List<DiaryDTO> dtos = diaryMapper.convertDevicesToDtos(diary);
         return new BaseResponse(HttpStatus.OK, "모든 일기 불러오기 성공", dtos);
     }
+
+    @Override
+    public void updateDiary(DiaryDTO diaryDTO) {
+        Diary diary = diaryRepository.findById(diaryDTO.id()).get();
+        diary.fixData(diaryDTO.emotion(), diaryDTO.hashtag(), diaryDTO.content());
+        diaryRepository.save(diary);
+    }
 }
