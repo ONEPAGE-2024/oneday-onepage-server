@@ -26,4 +26,8 @@ public class DiaryController {
     public void updateDiary(@RequestBody DiaryDTO diaryDTO) {
         diaryService.updateDiary(diaryDTO);
     }
+    @DeleteMapping("/delete/{id}")
+    public BaseResponse deleteDiary(@PathVariable Long id){
+        return diaryService.deleteDiary(id);
+    }
 }
