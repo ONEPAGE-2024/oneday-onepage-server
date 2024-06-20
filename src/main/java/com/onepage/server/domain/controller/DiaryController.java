@@ -22,4 +22,8 @@ public class DiaryController {
         return diaryService.findAll();
     }
 
+    @PutMapping("/update")
+    public void updateDiary(@RequestBody DiaryDTO diaryDTO) {
+        diaryService.updateDiary(diaryDTO);
+    }
 }
