@@ -5,6 +5,7 @@ import lombok.*;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Entity
 @Getter
@@ -26,8 +27,8 @@ public class Diary {
     /*
         해시태그
     */
-    @Column(nullable = false)
-    private String hashtag;
+    @ElementCollection
+    private List<String> hashtag;
 
     /*
         일기
@@ -42,14 +43,14 @@ public class Diary {
     private LocalDateTime regDate;
 
     @Builder
-    public Diary (String emotion, String hashtag, String content, LocalDateTime regDate) {
+    public Diary (String emotion, List<String> hashtag, String content, LocalDateTime regDate) {
         this.emotion = emotion;
         this.hashtag = hashtag;
         this.content = content;
         this.regDate = regDate;
     }
 
-    public void fixData(String emotion, String hashtag, String content){
+    public void fixData(String emotion, List<String> hashtag, String content){
         this.emotion = emotion;
         this.hashtag = hashtag;
         this.content = content;
