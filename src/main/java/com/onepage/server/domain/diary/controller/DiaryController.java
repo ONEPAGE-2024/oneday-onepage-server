@@ -22,9 +22,15 @@ public class DiaryController {
     }
 
     @GetMapping("/list")
-    @Operation(summary = "일기 조회", description = "일기들을 조회합니다.")
+    @Operation(summary = "일기 조회", description = "전체 일기를 조회합니다.")
     public BaseResponse allDiary(){
         return diaryService.findAll();
+    }
+
+    @GetMapping("/{id}")
+    @Operation(summary = "일기 조회", description = "일기들을 조회합니다.")
+    public BaseResponse getDiaryById(@PathVariable("id") Long id){
+        return diaryService.findById(id);
     }
 
     @PutMapping("/update")
