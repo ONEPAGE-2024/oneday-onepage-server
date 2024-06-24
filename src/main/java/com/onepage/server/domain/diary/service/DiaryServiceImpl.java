@@ -32,6 +32,12 @@ public class DiaryServiceImpl implements DiaryService {
     }
 
     @Override
+    public BaseResponse findById(Long id) {
+        Diary diary = diaryRepository.findById(id).get();
+        return new BaseResponse(HttpStatus.OK, "일기 단건 불러오기 성공", DiaryMapper.entityToDto(diary));
+    }
+
+    @Override
     public BaseResponse updateDiary(DiaryDTO diaryDTO) {
         Diary diary = diaryRepository.findById(diaryDTO.id()).get();
         diary.fixData(diaryDTO.emotion(), diaryDTO.hashtag(), diaryDTO.content());

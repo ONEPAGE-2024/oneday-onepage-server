@@ -6,6 +6,7 @@ import com.onepage.server.global.common.BaseResponse;
 public interface DiaryService {
     BaseResponse diaryCreate(DiaryDTO diaryDTO);
     BaseResponse findAll();
+    BaseResponse findById(Long id);
     BaseResponse updateDiary(DiaryDTO diaryDTO);
     BaseResponse deleteDiary(Long id);
 }
